@@ -1,0 +1,125 @@
+1)  Write a java program to calculate gross salary and net salary of following data
+DA = 50% of basic , HRA = 25% of basic ,CCA = Rs 240, PF=10%of basic, PT=Rs100/
+
+package assignment.pkg3;
+
+import java.util.Scanner;
+
+public class Netsalary {
+
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        String emp_name;
+        int emp_no;
+        float basic,da,hra,pf,gross,net;
+        int cca = 240,pt = 100;
+      
+        System.out.println("enter name of employee");
+        emp_name = input.nextLine();
+        System.out.println("enter employee number");
+        emp_no = input.nextInt();
+        System.out.println("enter basic amount value");
+        basic = input.nextFloat();
+        
+        da = (50*basic)/100;
+        hra = (25*basic)/100;
+        pf = (10*basic)/100;
+        
+        System.out.println("amount of da is "+da);
+        System.out.println("amount of hra is"+hra);
+        System.out.println("amount of pf is "+pf);
+        
+        gross = basic+da+hra+pf+cca+pt;
+        net = gross/6;
+        
+        System.out.println("amount of gross salary is "+gross);
+        System.out.println("amount of net salary is "+net);
+
+    }
+}
+
+Output:
+enter name of employee
+suhant
+enter employee number
+12154
+enter basic amount value
+25400
+
+amount of da is 12700
+amount of hra is 6350
+amount of pf is 2540
+amount of gross salary is 47330
+amount of net salary is 7888.33
+
+
+2)  Create a class box and display area of box using method area().
+Initialize all variables using constructor and demonstrate constructor overloading.
+
+package assignment.pkg3;
+
+public class Box1 {
+        int side;
+	float area;
+
+	Box1(int a)
+	{
+		side = a;
+	}
+
+	void area()
+	{
+		area = 6*side*side;
+	}
+
+    public static void main(String[] args)
+    {
+                 Box1 input = new Box1(5);
+	System.out.println("side of box is "+input.side);
+	input.area();
+	System.out.println("area of box is "+input.area);
+    }
+}
+
+Output:
+side of box is 5
+area of box is 150
+
+3) Write a java program that displays area of different figures (Rectangle,Square,Triangle) using method overloading.
+
+package assignment.pkg3;
+class Area
+{
+    private float x,y,z;
+    public float area(float r)
+    {
+        return(3.14f*r*r);
+    }
+    public float area(float l,float b)
+    {
+        return(l*b);
+    }
+    public float area (float a,float b,float c)
+    {
+        float s;
+        s = (a+b+c)/2;
+        s = s*(s-a)*(s-b)*(s-c);
+        return(float)(Math.sqrt(s));
+    }
+}
+public class Methodover {
+
+    public static void main(String[] args) {
+        Area a1 = new Area();
+        System.out.println("Area of circle is  "+a1.area(10));
+        System.out.println("Area of rectangle is  "+a1.area(10,10));
+        System.out.println("Area of triangle is  "+a1.area(5,12,10));
+    }
+}
+
+Output:
+Area of circle is 314
+Area of rectangle is 100 
+Area of triangle is 24.544
+
