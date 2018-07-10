@@ -1,0 +1,126 @@
+1) Write a program to find length of string and print second half of the string
+
+import java.util.Scanner;
+public class Strlen
+{
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		String s1;
+		int len;
+		System.out.println("enter a String");
+		s1 = input.nextLine();
+		len = s1.length();
+		System.out.println("your length of String is "+len);
+		System.out.println(" "+s1.substring(len/2));
+
+	}
+}
+
+Output:
+enter a String : Darshil
+your length of string is 7
+shil
+
+2)Write a program to accept a line and check how many constants and vowels are there in line
+
+import java.util.Scanner;
+public class consvow
+{
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		String s1;
+		int vowels = 0, constants = 0;
+
+		System.out.println("enter a string");
+		s1 = input.nextLine();
+
+		for(int i=0;i<s1.length();i++)
+		{
+		char ch = s1.charAt(i);
+
+		if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+		    {
+		    	vowels++;
+		    } 
+		 else
+		 	{
+		 		constants++;
+		 	}
+		}	
+		System.out.println("no of vowels are "+vowels);
+		System.out.println("no of constants are "+constants);
+
+	}
+}
+
+Output:
+enter a string : darshil
+no of vowels are : 2
+no of constants are : 5
+
+3)Write a program to count the number of words that start with capital letters
+
+package assignment.pkg3;
+
+import java.util.Scanner;
+public class Capital {
+
+ 	public static void main(String[] args)
+    	{
+        		Scanner in=new Scanner(System.in);
+        		String s = new String();
+        		System.out.println("Enter a line:");
+        		s = in.nextLine();
+       		 char c;
+        		int ct=0;
+        		for(int i=0;i<s.length();i++)
+       		 {
+            			c=s.charAt(i);	
+            			if(c>=65 && c<=90)
+            			{
+			                ct++;
+
+            			}
+	        	}
+          System.out.println("total  number of words start with capital letters are :"+ct);
+    	}
+}
+
+Output
+Enter a line : How Are You
+total  number of words start with capital letters are 3
+
+4) Write a program to find that given number or string is pallindrome or not
+
+package assignment.pkg3;
+
+import java.util.Scanner;
+
+public class Palindrome {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String str,rev;
+		StringBuilder str1 = new StringBuilder();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a String");
+		str = sc.nextLine();
+		str1.append(str);
+		str1.reverse();
+		rev = str1.toString();
+		if (str.equalsIgnoreCase(rev))
+		{
+			System.out.println("Palindrome");				
+		}	
+		else
+	        {
+			System.out.println("Not Palindrome");	
+	        }
+    }
+}
+
+Output:
+Enter a string : vpv
+Palindrome
