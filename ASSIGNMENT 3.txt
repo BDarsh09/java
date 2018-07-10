@@ -86,7 +86,7 @@ Output:
 side of box is 5
 area of box is 150
 
-3) Write a java program that displays area of different figures (Rectangle,Square,Triangle) using method overloading.
+3) Write a java program that displays area of different figures (Circle,Rectangle,Triangle) using method overloading.
 
 package assignment.pkg3;
 class Area
