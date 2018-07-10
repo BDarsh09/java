@@ -1,0 +1,123 @@
+1) Write a program to convert rupees to dollar. 60 rupees = 1 dollar.
+
+package assignment1;
+
+import java.util.Scanner;
+
+public class Dollar {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        int rs;
+        float dollar;
+        System.out.println("enter amount of rupees");
+        rs = input.nextInt();
+        dollar = rs/60;
+        System.out.println("Amount of dollar is "+dollar);
+    }
+
+Output
+
+enter amount of rupees : 240
+Amunt of dollar is : 4
+}
+
+2) Write a program that calculate percentage marks of the student if marks of 6 subjects are given
+
+package assignment1;
+
+import java.util.Scanner;
+
+public class Percentage {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        int m1,m2,m3,m4,m5,m6;
+        int per;
+        String name;
+        
+        System.out.println("Enter name of Student");
+        name = input.nextLine();
+        
+        System.out.println("enter marks of subject");
+        m1 = input.nextInt();
+        System.out.println("enter marks of subject");
+        m2 = input.nextInt();
+        System.out.println("enter marks of subject");
+        m3 = input.nextInt();
+        System.out.println("enter marks of subject");
+        m4 = input.nextInt();
+        System.out.println("enter marks of subject");
+        m5 = input.nextInt();
+        System.out.println("enter marks of subject");
+        m6 = input.nextInt();
+        
+        per = (m1+m2+m3+m4+m5+m6)/6;
+        
+        System.out.println("percentage of student is "+per);
+    }
+
+Output:
+
+Enter name of student  : Darshil
+enter marks of student : 80,75,85,79,82
+percentage of student is : 80.2
+
+}
+
+3) Write a program to enter two numbers and perform mathematical operations on them.
+
+package assignment1;
+
+import java.util.Scanner;
+
+public class Add {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int a,b,ch;
+        System.out.println("enter a number");
+        a = input.nextInt();
+        System.out.println("enter another number");
+        b = input.nextInt();
+        
+        System.out.println("1.add 2.sub 3.mul 4.div");
+        System.out.println("enter your choice");
+        ch = input.nextInt();
+        
+        switch(ch)
+        {
+            case 1:System.out.println("Addition");
+                   System.out.println(a + b);
+                   break; 
+                
+            case 2:System.out.println("Subtraction");
+                   System.out.println(a - b);
+                   break;
+                
+            case 3:System.out.println("Multiplication");
+                   System.out.println(a * b);
+                   break;
+                
+            case 4:System.out.println("Division");
+                   System.out.println(a / b);
+                   break;
+                
+            default:System.out.println("Wrong choice");
+        
+        
+        }
+        
+    }
+
+Output:
+
+enter a number : 12
+enter another number : 15
+1.add 2.sub 3.mul 4.div
+enter your choice : 1
+Addition
+27
+}
