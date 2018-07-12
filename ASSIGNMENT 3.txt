@@ -1,58 +1,58 @@
 1)  Write a java program to calculate gross salary and net salary of following data
 DA = 50% of basic , HRA = 25% of basic ,CCA = Rs 240, PF=10%of basic, PT=Rs100/
 
-package assignment.pkg3;
-
 import java.util.Scanner;
-
-public class Netsalary {
-
-    public static void main(String[] args) {
-        
-        Scanner input = new Scanner(System.in);
-        String emp_name;
-        int emp_no;
-        float basic,da,hra,pf,gross,net;
-        int cca = 240,pt = 100;
-      
-        System.out.println("enter name of employee");
-        emp_name = input.nextLine();
-        System.out.println("enter employee number");
-        emp_no = input.nextInt();
-        System.out.println("enter basic amount value");
-        basic = input.nextFloat();
-        
-        da = (50*basic)/100;
-        hra = (25*basic)/100;
-        pf = (10*basic)/100;
-        
-        System.out.println("amount of da is "+da);
-        System.out.println("amount of hra is"+hra);
-        System.out.println("amount of pf is "+pf);
-        
-        gross = basic+da+hra+pf+cca+pt;
-        net = gross/6;
-        
-        System.out.println("amount of gross salary is "+gross);
-        System.out.println("amount of net salary is "+net);
-
+class Salary
+{
+    double Gross(double b,double d,double h)
+    {
+        return (b+d+h);
+    }
+    
+    double Net(double cca,double h,double pt)
+    {
+        return (cca+h+pt);
     }
 }
 
+class Basic
+{
+    public static void main (String[] args) {
+      
+      Scanner input = new Scanner(System.in);
+      Salary sac = new Salary();
+      
+      String emp_name;
+      double basic,empno;
+      double cca = 240,pt = 100,da,hra,pf;
+      double Grosss,Nett;
+      
+      System.out.println("enter name of employee");
+      emp_name = input.nextLine();
+      System.out.println("enter no of employee");
+      empno = input.nextDouble();
+      System.out.println("enter basic value");
+      basic = input.nextDouble();
+      da = (50 * basic)/100;
+      hra = (25 * basic)/100;
+      pf = (10 * basic)/100;
+      
+      
+      Grosss = sac.Gross(basic,da,hra);
+      Nett = sac.Net(cca,hra,pt);
+      
+      System.out.println("Gross value is "+Grosss);
+      System.out.println("Net value is "+Nett);
+     }
+}
+
 Output:
-enter name of employee
-suhant
-enter employee number
-12154
-enter basic amount value
-25400
+enter name of employee : mukesh
+enter no of employee : 12154
+enter basic value : 25000
 
-amount of da is 12700
-amount of hra is 6350
-amount of pf is 2540
-amount of gross salary is 47330
-amount of net salary is 7888.33
-
+Gross value is : 43750
+Net value is : 6590
 
 2)  Create a class box and display area of box using method area().
 Initialize all variables using constructor and demonstrate constructor overloading.
