@@ -1,0 +1,51 @@
+import java.util.Scanner;
+class Office
+{
+	void getval(){
+        Scanner input = new Scanner(System.in);
+	int emp_no,sal;
+	String emp_name;
+	System.out.println("enter the name of employee");
+	emp_name = input.nextLine();
+	System.out.println("enter employee no.");
+	emp_no = input.nextInt();
+	System.out.println("enter salary");
+	sal = input.nextInt();
+}
+}
+class teaching extends Office
+{
+    void setvalue()
+    {
+        Scanner input = new Scanner(System.in);
+        String field;
+        System.out.println("enter field of your work");
+        field = input.nextLine();
+    }
+}
+class nonteaching extends Office
+{
+    void setvalue()
+    {
+        Scanner input = new Scanner(System.in);
+        String work;
+        System.out.println("enter the work you do");
+        work = input.nextLine();
+    }
+}
+class Inherit
+{
+    public static void main(String args[])
+    {
+        teaching obj1 = new teaching();
+        nonteaching obj2 = new nonteaching();
+        
+        System.out.println("Teaching Staff");
+        obj1.getval();
+        obj1.setvalue();
+        
+        System.out.println("Non Teaching Staff");
+        obj2.getval();
+        obj2.setvalue();
+    }
+}
