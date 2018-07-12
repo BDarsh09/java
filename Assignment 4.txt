@@ -1,3 +1,5 @@
+Write a java program that implements educational hierarchy using inheritance
+
 import java.util.Scanner;
 class Office
 {
@@ -49,3 +51,16 @@ class Inherit
         obj2.setvalue();
     }
 }
+
+Output:
+Teaching staff
+enter the name of employee : miraj
+enter employee no : 12142
+enter salary : 25000
+enter field of your work : teacher
+
+Non Teaching Staff
+enter the name of employee : kalpesh
+enter employee no : 12102
+enter salary : 10000
+enter the work you do : staff
