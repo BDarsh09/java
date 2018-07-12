@@ -40,15 +40,19 @@ public class consvow
 		{
 		char ch = s1.charAt(i);
 
-		if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+		if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch = 'E' || ch == 'I' || ch == 'O' || ch == 'U')
 		    {
 		    	vowels++;
 		    } 
-		 else
-		 	{
-		 		constants++;
-		 	}
-		}	
+		 else if (ch == ' ')
+		{
+	 		spaces++;
+	 	}
+		else
+		{
+			constants++
+		}
+		System.out.println("no of spaces are "+spaces);
 		System.out.println("no of vowels are "+vowels);
 		System.out.println("no of constants are "+constants);
 
@@ -57,6 +61,7 @@ public class consvow
 
 Output:
 enter a string : darshil
+no of spaces are : 0
 no of vowels are : 2
 no of constants are : 5
 
