@@ -1,0 +1,113 @@
+1) WAP that creates abstract class figure.Declare area method in this class.Class rectangle and class circle inherits class figure.
+Write the method in all class that prints area of respective figure. 
+
+import java.util.Scanner;
+
+abstract class Figure
+{
+    abstract void areacir(int r);
+    abstract void arearec(int l,int b);    
+}
+abstract class Circle1 extends Figure
+{
+    void areacir(int r)
+    {
+        double area = 3.14*r*r;
+        System.out.println("area of circle "+area);
+    }
+}
+class Rectangle1 extends Figure
+{
+    void areacir(int r)
+    {
+        double area = 3.14*r*r;
+        System.out.println("area of circle "+area);
+    }
+    
+    void arearec(int l,int b)
+    {
+        double area = l * b;
+        System.out.println("area of rectangle "+area);
+    }
+}
+public class Assignment5 {
+
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        Figure obj = new Rectangle1();
+
+        int l,b,r;
+        
+        System.out.println("enter radius of circle");
+        r = input.nextInt();
+        obj.areacir(r);
+        
+        System.out.println("enter length and breadth of rectangle");
+        l = input.nextInt();
+        b = input.nextInt();
+        obj.arearec(l, b);       
+    }
+}
+
+Output:
+enter radius of circle: 4
+area of circle : 50.24
+enter length and breadth of rectangle : 4,5
+area of rectangle : 20
+
+2) WAP that illustrate how method can invoke a super class method.
+ There is one supercalss A. class B extends class A and class C extends class B. 
+ Each of these classes define a getdescription() method that returns a string.   
+ That string includes description of the class plus description of each super class. Inherits each of these class and invoke the gerdescription() method.
+
+import java.util.Scanner;
+
+class A
+{
+  
+    void get_description()
+    {
+        Scanner input = new Scanner(System.in);
+        String name;
+        System.out.println("enter your name");
+        name = input.nextLine();
+        
+    }
+}
+class B extends A
+{
+    void get_desc()
+    {
+       
+        Scanner input = new Scanner(System.in);
+        String surname;
+        System.out.println("enter your surname");
+        surname = input.nextLine();
+    }
+}
+class C extends B
+{
+    void getdesc()
+    {
+    Scanner input = new Scanner(System.in);
+    String college;
+    System.out.println("enter college name");
+    college = input.nextLine();
+    }
+    
+}
+public class Multi {
+
+    public static void main(String[] args) {
+        C obj = new C();
+        obj.get_description();
+        obj.get_desc();
+        obj.getdesc();
+      }
+}
+
+Output:
+enter your name : darshil
+enter your surname : bavishi
+enter college name : VVP engg clg.
