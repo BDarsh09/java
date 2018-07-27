@@ -1,7 +1,7 @@
-Write a program that creates interface.
+/*Write a program that creates interface.
 Declare one method interest(p,r,n) in this interface and create two classes 
 Simple and Compound that implements interest(p,r,n) and find simple and compound interest.
-
+*/
 interface Int
 {
 	public void interest(int p,int r,int n);
