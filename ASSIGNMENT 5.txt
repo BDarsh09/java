@@ -5,56 +5,56 @@ import java.util.Scanner;
 
 abstract class Figure
 {
-    abstract void areacir(int r);
-    abstract void arearec(int l,int b);    
-}
-abstract class Circle1 extends Figure
-{
-    void areacir(int r)
+    double l,r;
+    Figure(double x,double y)
     {
-        double area = 3.14*r*r;
-        System.out.println("area of circle "+area);
+        l=x;
+        r=y;
+    }
+    abstract double area();
+}
+class Circle extends Figure
+{
+    Circle(double x,double y)
+    {
+        super(x,y);
+    }    
+    double area()
+    {
+        double a = 3.14*r*r;
+        return a;
     }
 }
-class Rectangle1 extends Figure
+class Rectangle extends Figure
 {
-    void areacir(int r)
+    Rectangle(double x,double y)
     {
-        double area = 3.14*r*r;
-        System.out.println("area of circle "+area);
+        super(x,y);
     }
+    double area()
+    {
+        double a = l*l;
+        return a;
+    }
+}
     
-    void arearec(int l,int b)
-    {
-        double area = l * b;
-        System.out.println("area of rectangle "+area);
-    }
-}
-public class Assignment5 {
+public class Main {
 
     public static void main(String[] args)
     {
-        Scanner input = new Scanner(System.in);
-        Figure obj = new Rectangle1();
+        
+        Figure obj;
+        obj = new Circle(15,12);
+        System.out.println("area of circle is "+obj.area());
 
-        int l,b,r;
-        
-        System.out.println("enter radius of circle");
-        r = input.nextInt();
-        obj.areacir(r);
-        
-        System.out.println("enter length and breadth of rectangle");
-        l = input.nextInt();
-        b = input.nextInt();
-        obj.arearec(l, b);       
+        obj = new Rectangle(25,16);
+        System.out.println("area of rectangle is "+obj.area());
     }
 }
 
 Output:
-enter radius of circle: 4
-area of circle : 50.24
-enter length and breadth of rectangle : 4,5
-area of rectangle : 20
+area of circle : 425.199999999997
+area of rectangle : 625
 
 2) WAP that illustrate how method can invoke a super class method.
  There is one supercalss A. class B extends class A and class C extends class B. 
@@ -66,7 +66,7 @@ import java.util.Scanner;
 class A
 {
   
-    void get_description()
+    void get_desc()
     {
         Scanner input = new Scanner(System.in);
         String name;
@@ -79,7 +79,7 @@ class B extends A
 {
     void get_desc()
     {
-       
+        super.get_desc();
         Scanner input = new Scanner(System.in);
         String surname;
         System.out.println("enter your surname");
@@ -88,8 +88,9 @@ class B extends A
 }
 class C extends B
 {
-    void getdesc()
+    void get_desc()
     {
+    super.get_desc();
     Scanner input = new Scanner(System.in);
     String college;
     System.out.println("enter college name");
@@ -101,9 +102,7 @@ public class Multi {
 
     public static void main(String[] args) {
         C obj = new C();
-        obj.get_description();
         obj.get_desc();
-        obj.getdesc();
       }
 }
 
